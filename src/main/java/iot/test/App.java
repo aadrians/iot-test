@@ -17,7 +17,6 @@ public class App {
 		try {
 			client = new MqttClient("tcp://localhost:1883", "pahoMqttPublish1");
 			client.connect();
-			
 			MqttMessage message = new MqttMessage();
 			message.setPayload("Hello from Paho!".getBytes());
 			client.publish("pahodemo/test", message);
